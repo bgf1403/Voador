@@ -8,12 +8,14 @@ public class Aviao implements Voador{
         this.horasDeVoo = horasDeVoo;
     }
 
-    private int horasDeVoo = 100;
+    private int horasDeVoo = 0;
 
 
     @Override
     public void voar() {
-        System.out.println(13+horasDeVoo);
+
+        this.setHorasDeVoo(this.getHorasDeVoo()+13);
+        System.out.println("Horas de Vôo do Avião: " + this.getHorasDeVoo());
         System.out.println("Estou voando como um avião");
     }
 }

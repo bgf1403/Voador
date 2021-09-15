@@ -8,11 +8,13 @@ public class SuperHomem implements Voador{
         this.experiencia = experiencia;
     }
 
-    private int experiencia = 100;
+    private int experiencia = 0;
 
     @Override
     public void voar() {
-        System.out.println(experiencia+3);
+
+        this.setExperiencia(this.getExperiencia()+3);
+        System.out.println("Experiência do Super-Homem: " + this.getExperiencia());
         System.out.println("Estou voando como um campeão");
     }
 }

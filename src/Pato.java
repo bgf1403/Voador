@@ -8,13 +8,13 @@ public class Pato implements Voador {
         this.energia = energia;
     }
 
-    private int energia = 100;
+    private int energia = 0;
 
 
     @Override
     public void voar() {
-
-        System.out.println(energia - 5);
+        this.setEnergia(this.getEnergia()-5);
+        System.out.println("Energia do Pato: " + this.getEnergia());
         System.out.println("Estou voando como um pato");
     }
 }
